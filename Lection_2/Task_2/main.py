@@ -2,8 +2,8 @@ list = []
 
 number = int(input("How many elements do you want to enter? "))
 
-for i in range(number):
-	list.append(input("Element {}: ".format(i)))
+for element in range(number):
+	list.append(input("Element {}: ".format(element)))
 
 unique = set(list)
 
