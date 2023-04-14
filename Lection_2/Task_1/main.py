@@ -9,8 +9,4 @@ for element in range(number):
 
 search = input("Enter the element you want to search for: ")
 
-for element in range(number):
-	if list[element] == search:
-		occurrences += 1
-
-print("Occurrences:", occurrences)
+print("Occurrences:", list.count(search))

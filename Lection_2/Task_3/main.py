@@ -1,7 +1,13 @@
-lists = [[], [], []]
+size = 3
+
+lists = []
+
+for entry in range(size):
+	lists.append([])
+
 elements = set()
 
-for list in range(3):
+for list in range(size):
 	number = int(input("How many elements do you want to enter in the list {}? ".format(list)))
 	
 	for element in range(number):
