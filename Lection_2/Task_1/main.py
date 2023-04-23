@@ -1,7 +1,5 @@
 list = []
 
-occurrences = 0
-
 number = int(input("How many elements do you want to enter? "))
 
 for element in range(number):
