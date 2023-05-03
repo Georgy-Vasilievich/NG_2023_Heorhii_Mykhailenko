@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chat</title>
+</head>
+<body>
+    <p><a href="logout">Log out</a></p>
+    <form method="POST">
+        <label for="message">Message: </label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <p>Sent messages:</p>
+{{ messages | safe }}
+</body>
+    </p>
+</html>
