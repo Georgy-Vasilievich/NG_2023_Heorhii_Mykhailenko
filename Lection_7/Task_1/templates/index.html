@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>News</title>
+</head>
+<body>
+    {% if not authenticated %}
+    <p><a href="login">Log in</a></p>
+    {% else %}
+    <p><a href="logout">Log out</a></p>
+    <form method="POST">
+        <label for="header">Header: </label><br>
+        <input type="text" id="header" name="header" required><br>
+        <label for="content">Content: </label><br>
+        <textarea id="content" name="content" required></textarea><br>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    {% endif %}
+{{ articles | safe }}
+</body>
+</html>
