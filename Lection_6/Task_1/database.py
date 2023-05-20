@@ -1,4 +1,3 @@
-from markupsafe import escape
 import bcrypt
 import sqlite3
 
@@ -24,12 +23,17 @@ def getArticles():
         getUsernameCursor = connection.cursor()
         getUsernameCursor.execute('SELECT username FROM users WHERE id = ?', (article[0],))
         username = getUsernameCursor.fetchone()[0]
-        result += '<hr>\n    <p><h2>{}</h2><br>\nPosted by {} at {}<br>\n'.format(article[2], username, article[1])
+        result += '''
+    <hr>
+    <h2>{}</h2>
+    <p>
+    Posted by {} at {}<br>
+    '''.format(article[2], username, article[1])
         content = article[3].splitlines()
         for index, line in enumerate(content):
             result += '{}'.format(line)
             if index != len(content) - 1:
-                result += '<br>'
+                result += '<br>\n    '
         result += '</p>\n'
     return result
 
